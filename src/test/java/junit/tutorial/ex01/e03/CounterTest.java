@@ -27,15 +27,26 @@ class CounterTest {
 	}
 
 	@Test
-	void testCounter() {
-		
+	void testIncrement1() {
+		Counter counter=new Counter();
+		int answer=counter.increment();
+		assertEquals(1,answer,"違うよ");
 	}
-
 	@Test
-	void testIncrement() {
-		fail("Not yet implemented");
-		int answer=;
-		assertEquals(answer, null);
+	void testIncrement2() {
+		Counter counter=new Counter();
+		int answer=counter.increment();
+		answer=counter.increment();
+		assertEquals(2,answer,"違うよ");
 	}
-
+	@Test
+	void testIncrement3() {
+		Counter counter=new Counter();
+		int answer=0;
+		for(int i=1;i<=50;i++) {
+			answer=counter.increment();
+		}
+		answer=counter.increment();
+		assertEquals(51,answer,"違うよ");
+	}
 }
