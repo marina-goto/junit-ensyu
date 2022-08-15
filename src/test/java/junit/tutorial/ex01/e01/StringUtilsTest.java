@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ex01.StringUtils;
 
 class StringUtilsTest {
 
@@ -29,9 +28,17 @@ class StringUtilsTest {
 	}
 
 	@Test
-	void testToSnakeCase() {
-		String snake=StringUtils.toSnakeCase("aaa");
-		assertEquals("aaa", snake,"違う");
+	void testToSnakeCase1() {
+		String answer=StringUtils.toSnakeCase("aaa");
+		assertEquals("aaa", answer,"違う");}
+	
+	@Test
+	void testToSnakeCase2() {
+		String answer=StringUtils.toSnakeCase("HelloWorld");
+		assertEquals("hello_world",answer,"違う");}
+	@Test
+	void testToSnakeCase3() {
+		String answer=StringUtils.toSnakeCase("practiceJunit");
+		assertEquals("practice_junit",answer,"違う");
 		}
-
 }
